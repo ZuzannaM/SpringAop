@@ -11,13 +11,6 @@ public class Circle {
 
 	public void setName(String name) {
 		this.name = name;
-		System.out.println("Circle's setter called.");
-//		throw(new RuntimeException());
-	}
-	public String setNameAndReturn(String name) {
-		this.name = name;
-		System.out.println("Circle's setter called. version 2");
-		return name;
 	}
 	
 }
