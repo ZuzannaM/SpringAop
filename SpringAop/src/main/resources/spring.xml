@@ -24,7 +24,7 @@
 <!-- 	<context:component-scan base-package="com.moleda.zuzanna.SpringAop.model, com.moleda.zuzanna.SpringAop.service" /> -->
 
 	<bean id="circle" class="com.moleda.zuzanna.SpringAop.model.Circle" >
-		<property name="name" value="Circle" />
+<!-- 		<property name="name" value="Circle" /> -->
 	</bean>
 	
 	<bean id="triangle" class="com.moleda.zuzanna.SpringAop.model.Triangle" >

@@ -13,7 +13,8 @@ public class App {
 		cxt.registerShutdownHook();
 		
 		ShapeService shapeService = cxt.getBean("shapeService", ShapeService.class);
-		System.out.println(shapeService.getCircle().getName());
+		shapeService.getCircle().setNameAndReturn("Dummy name");
+//		System.out.println(shapeService.getCircle().getName());
 		
 	}
 }
