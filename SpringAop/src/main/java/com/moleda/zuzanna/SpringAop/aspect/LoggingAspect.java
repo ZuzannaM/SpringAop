@@ -10,26 +10,9 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
 
-@Aspect
+
 public class LoggingAspect {
 
-//	@Before("allGetters() && allCircleMethods()")
-//	public void LoggingAdvice(){
-//		System.out.println("Logging advice. Run advice.");
-//	}
-	
-//	@Before("allGetters()")
-//	public void secondAdvice(){
-//		System.out.println("Second advice run.");
-//	}
-	
-	
-//	@AfterReturning("args(name)")
-//	public void okMethod(String name){
-//		System.out.println("PPPPPPPPPPPP name: " + name);
-//	}
-	
-	@Around("@annotation(com.moleda.zuzanna.SpringAop.aspect.Loggable)")
 	public Object myAroundAdvice(ProceedingJoinPoint proceedingJoinPoint){
 		
 		Object returnValue = null;
@@ -46,9 +29,7 @@ public class LoggingAspect {
 		
 	}
 	
-	@Pointcut("execution(* get*())")
+	
 	public void allGetters() {}
 	
-	@Pointcut("within(com.moleda.zuzanna.SpringAop.model.Circle)")
-	public void allCircleMethods() {}
 }

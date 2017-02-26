@@ -34,4 +34,12 @@
 	<bean id="shapeService" class="com.moleda.zuzanna.SpringAop.service.ShapeService" autowire="byName"/>
 
 	<bean id="loggingAspect" class="com.moleda.zuzanna.SpringAop.aspect.LoggingAspect" />
+	
+	<aop:config>
+		<aop:aspect id="loggingAspect" ref="loggingAspect" >
+			<aop:pointcut id="allGetters" expression="execution(* get*())" />
+			<aop:around method="myAroundAdvice" pointcut-ref="allGetters" />
+		</aop:aspect>
+	</aop:config>
+	
 </beans>
