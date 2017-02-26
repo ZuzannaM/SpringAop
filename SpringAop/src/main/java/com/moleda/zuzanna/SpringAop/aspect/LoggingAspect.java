@@ -29,7 +29,7 @@ public class LoggingAspect {
 //		System.out.println("PPPPPPPPPPPP name: " + name);
 //	}
 	
-	@Around("allGetters()")
+	@Around("@annotation(com.moleda.zuzanna.SpringAop.aspect.Loggable)")
 	public Object myAroundAdvice(ProceedingJoinPoint proceedingJoinPoint){
 		
 		Object returnValue = null;

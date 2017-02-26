@@ -1,6 +1,7 @@
 package com.moleda.zuzanna.SpringAop.service;
 
 
+import com.moleda.zuzanna.SpringAop.aspect.Loggable;
 import com.moleda.zuzanna.SpringAop.model.Circle;
 import com.moleda.zuzanna.SpringAop.model.Triangle;
 
@@ -9,6 +10,7 @@ public class ShapeService {
 	private Circle circle;
 	private Triangle triangle;
 	
+	@Loggable
 	public Circle getCircle() {
 		return circle;
 	}

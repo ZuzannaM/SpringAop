@@ -11,8 +11,8 @@ public class App {
 	
 		AbstractApplicationContext cxt = new ClassPathXmlApplicationContext("spring.xml");
 		cxt.registerShutdownHook();
-		
 		ShapeService shapeService = cxt.getBean("shapeService", ShapeService.class);
+		
 		shapeService.getCircle();
 //		System.out.println(shapeService.getCircle().getName());
 		
