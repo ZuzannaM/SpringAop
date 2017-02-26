@@ -1,13 +1,19 @@
 package com.moleda.zuzanna.SpringAop;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.moleda.zuzanna.SpringAop.service.ShapeService;
+
+public class App {
+	
+	public static void main(String[] args) {
+	
+		AbstractApplicationContext cxt = new ClassPathXmlApplicationContext("spring.xml");
+		cxt.registerShutdownHook();
+		
+		ShapeService shapeService = cxt.getBean("shapeService", ShapeService.class);
+		System.out.println(shapeService.getCircle().getName());
+		
+	}
 }
