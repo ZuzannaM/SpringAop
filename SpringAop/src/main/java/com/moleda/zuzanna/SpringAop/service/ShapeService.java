@@ -10,6 +10,7 @@ public class ShapeService {
 	private Triangle triangle;
 	
 	public Circle getCircle() {
+		System.out.println("Get circle");
 		return circle;
 	}
 	public void setCircle(Circle circle) {

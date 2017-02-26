@@ -32,4 +32,8 @@ public class LoggingAspect {
 	
 	public void allGetters() {}
 	
+	public void getLoggingAdvice(){
+		System.out.println("Logging advice");
+	}
+	
 }
